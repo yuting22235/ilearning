@@ -1,0 +1,298 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: serif;
+}
+
+/*導覽列*/
+nav {
+    background-color: #79828a;
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 50px;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.4s;
+    z-index: 1000;
+    border-bottom: 1px solid #E7E7E7;
+}
+nav.sticky {
+    padding: 20px 30px;
+    background: #fff;
+}
+nav .logo {
+    position: relative;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    transition: 0.6s;
+}
+nav ul {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 70px;
+}
+.nav-links {
+    flex: 1;
+    text-align: center;
+}
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding:16px 32px;
+    position: relative;
+}
+.nav-links ul li a {
+    position: relative;
+    margin: 0 15px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 500px;
+    transition: 0.6s;
+    letter-spacing: 2px;
+}
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: #8E8E8E;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+nav.sticky .logo,
+nav.sticky ul li a {
+    color: #000;
+}
+
+/*首頁大圖框架*/
+.box{
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+}
+.img-tran{
+    width: 700px; 
+    height: 385px;
+    transition: 0.5s;
+    opacity: 1;
+}
+.img-tran:hover{
+    opacity: 0.8;
+}
+.mySlides {display:none;}
+
+
+/*樂學園文字框*/
+.text-box {
+    width: 460px;
+    height: 200px;
+    background-color: rgba(210, 210, 211, 0.8); /*背景半透明*/
+    color: #fff;
+    position: absolute;
+    left: 985px;
+    top: 440px;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.text-box h1 {
+    margin-top: 35px;
+    font-size: 54px;
+    color: #3f3f3f;
+    letter-spacing: 15px;
+}
+.text-box p {
+    margin: 15px 0 40px;
+    font-size: 18px;
+    color: #3f3f3f;
+    letter-spacing: 3px;
+}
+
+/*半透明小圓點*/
+.color-dot1{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: #37465A;
+    opacity: 0.9;
+    position: absolute;
+    top: 205px;
+    left: 240px;
+}
+.color-dot2{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: #37465A;
+    opacity: 0.9;
+    position: absolute;
+    top: 590px;
+    left: 775px;
+}
+
+
+/*滑入文字*/
+.p_scroll{
+    position: absolute;
+    top: 930px;
+    left: 170px;
+}
+.p_scroll h1{
+    font-size: 44px;
+    letter-spacing: 8px;
+}
+.p_scroll p{
+    margin-top: 10px;
+    font-size: 18px;
+    letter-spacing: 3px;
+}
+
+.colorbox_scroll{
+    width: 400px;
+    height: 100px;
+    background-color: #CBC9DC;
+    opacity: 0.7;
+    position: absolute;
+    top: 1050px;
+    left: 1000px;
+}
+
+.digit{
+    opacity: 0;
+    -webkit-transform: translateX(-60px);
+    -moz-transform: translateX(-60px);
+    -ms-transform: translateX(-60px);
+    -o-transform: translateX(-60px);
+    transform: translateX(-60px);
+    -webkit-transform: all 0.9s ease-out;
+    -moz-transform: all 0.9s ease-out;
+    -ms-transform: all 0.9s ease-out;
+    -o-transform: all 0.9s ease-out;
+    transition: all 0.9s ease-out;
+}
+.digit.visible{
+    opacity: 1;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
+
+}
+
+
+/*圖檔*/
+.img_1{
+    position: absolute;
+    top: 850px;
+    left: 800px;
+}
+
+
+/*樂學園分類*/
+.box2{
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    margin-top: 240px;
+    margin-bottom: 100px;
+}
+.wrap{
+    width: 1140px;
+    display: flex;
+    margin: auto;
+}
+.item{
+    width: 300px;
+    margin: 40px;
+    text-align: center;
+    background-color: #EBEBEB ;
+    transform: translateY(0px);
+    transition: .5s;
+    border-radius: 20px;
+}
+.item img{
+    width: 300px;
+    vertical-align: middle;
+    border-radius: 20px;
+}
+.item h2{
+    border-bottom: 1px solid #888;
+    margin-bottom: .3em;
+    padding-bottom: .3em;
+    letter-spacing: 5px;
+}
+.item p{
+    padding-top: 5px;
+    line-height: 1.6;
+    letter-spacing: 3px;
+}
+.item .txt{
+    padding: 20px;
+    position: relative;;
+}
+
+.item .txt:before{                       /*繪製三角形效果*/
+    content: ''; 
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 0;
+    top: 0;
+    border-top: 50px solid transparent;
+    border-left: 150px solid #EBEBEB;
+    border-right: 150px solid #EBEBEB;
+    transform: translateY(-100%);
+}
+.item:hover{                             /*動畫*/
+    transform: translateY(-30px);
+}
+.item:hover .txt:before{
+    border-left: 150px solid #7a8495;
+    border-right: 150px solid #7a8495;
+}
+.item:hover .txt{
+    background-color: #7a8495;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.item:hover h2{
+    color: #fff;
+    border-bottom: 1px solid #fff;
+}
+.item:hover p{
+    color: #fff;
+}
+
+/*版權列*/
+.footer{
+    width: 100%;
+    height: 150px;
+    background-color: #7a8495;
+    text-align: center;
+    color: #fff;
+    padding: 33px;
+    font-family: sans-serif;
+    z-index: 1000;
+}
+
+.footer h1{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.footer p{
+    font-size: 12px;
+}
